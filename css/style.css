@@ -7,99 +7,126 @@ body{
     display: grid;
     place-content: center;
     min-height: 100vh;
-    /* background-color: hsl(300, 43%, 22%); */
     font-family: 'Work Sans', sans-serif;
 }
+.contanier{
+    padding: 20px 30px;
 
-.head-con .contanier{
-    display: grid;
-    width: 1140px;
-    grid-template-columns: repeat(auto-fill,minmax(calc(1140px / 2),1fr));
 }
-.head-con .contanier .right-side h1{
-    color: hsl(300, 43%, 22%);
-    font-weight: bolder;
-    font-size: 42px;
+main{
+    padding: 20px 40px;
 }
-.head-con .contanier .right-side p{
-    font-size: 15px;
-    line-height: 1.6;
-    color:  hsl(303, 10%, 53%);
-}
-.head-con .contanier .left-side{
-    display: grid;
-    grid-template-rows: repeat(3,auto);
-}
-.head-con .contanier .left-side .one,
-.head-con .contanier .left-side .tow,
-.head-con .contanier .left-side .three{
-    background-color: hsl(300, 24%, 96%);
-    height: 50px;
-    width:70%;
-    border-radius: 12px;
+.contain .head-con{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 }
-.head-con .contanier .left-side p{
+.contain .head-con .card{
+    width: 420px;
+}
+.contain .head-con .card h1{
     color: hsl(300, 43%, 22%);
-    font-weight: 700;
+    font-weight: 900;
 }
-.head-con .contanier .left-side img{
-    width: 20px;
-    height: 20px;
+.contain .head-con .card p{
+    color: hsl(303, 10%, 53%);
+    line-height: 1.5;  
 }
-.head-con .contanier .left-side .tow{
-    margin-left: 10%;
+.contain .head-con .review-card{
+    margin-left: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.head-con .contanier .left-side .three{
-    margin-left: 20%;
-}
-.bottom-contain{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(calc(1000px / 3 ),1fr));
-    grid-column-gap: 10px;
+.contain .head-con .review-card .rate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 40px;
+    border-radius:18px ;
+    background-color:hsl(300, 24%, 96%) ;
+    padding: 30px 40px
     
 }
-.bottom-contain img{
-    border-radius: 50%;
-    margin-top: 15px;
-    width: 50px;
+.contain .head-con .review-card .rate p{
+    margin-left: 30px;
 }
-.bottom-contain .customer .head h3{
-    margin-left: 10px;
-    margin-bottom: 20px;
-    display: inline-block;
-    color: white;
-    font-size: 18px;
+.contain .head-con .review-card .rate:nth-child(2){
+    margin-left: 10%;
 }
-.bottom-contain .customer .head h3 span{
-    color: hsl(333, 80%, 67%) ;
+.contain .head-con .review-card .rate:nth-child(3){
+    margin-left: 20%;
 }
-
-.bottom-contain .customer {
+.contain .bottom-con{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.contain .bottom-con .card{
     background-color: hsl(300, 43%, 22%);
-    height: 250px;
+    /* padding: 40px 30px;   */
+    width: calc(90% / 3);
+    border-radius: 8px;
+    height: 260px;
 }
-.bottom-contain .customer .text{
-    margin-top: 30px;
+.contain .bottom-con .card img{
+    border-radius: 50%;
+    width: 60px;
 }
-.bottom-contain .customer .text p{
-    line-height: 1.6;
+.contain .bottom-con .card h2{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.contain .bottom-con .card h2 span{
+    color: hsl(303, 10%, 53%);
+}
+.contain .bottom-con .card p{
     color: white;
-    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
 }
-.bottom-contain .tow{
-    margin-top: 10%;
+.contain .bottom-con .card:nth-child(2){
+    margin-top: 2%;
 }
-.bottom-contain .three{
-    margin-top: 20%
+.contain .bottom-con .card:nth-child(3){
+    margin-top: 4%;
 }
-@media (max-width:767px) {
-    .head-con .contanier{
-        display: grid;
-        width: 320px;
-        grid-template-rows: repeat(auto-fill,minmax(calc(1140px / 2),1fr));
+@media (max-width:768px) {
+    .head-con{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    .contain .head-con .card {
+        justify-content: center;
+        text-align: center;
+        width: 350px;
+    }
+    .contain .head-con .review-card{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .contain .head-con .review-card .rate{
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .head-con .review-card .rate.rate:nth-child(2){
+        margin-left: 0;
+    }
+    .head-con .review-card .rate.rate:nth-child(3){
+        margin-left: 0;
+    }
+    .contain .bottom-con {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contain .bottom-con .card {
+        width:320px;
+        display: flex;
+        flex-direction: column;
+
     }
 }
